@@ -14,7 +14,6 @@
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.2",
     "autoprefixer": "^6.3.3",
-    "csscomb": "^4.2.0",
     "gulp-postcss": "^7.0.1"
   }
 }

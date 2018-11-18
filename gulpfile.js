@@ -20,8 +20,11 @@ gulp.task('serve', function() {
 gulp.task('sass', function() {
     return gulp.src("scss/styles.scss")
         .pipe(sass().on('error', sass.logError))
+        .pipe(postcss([autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: true
+        })]))
         .pipe(gulp.dest("./"))
-        .pipe(postcss([ autoprefixer() ]))
         .pipe(browserSync.stream());
 });
 

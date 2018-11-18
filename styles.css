@@ -12,9 +12,12 @@ body {
 
 section {
   padding: 0;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row-reverse;
-  align-items: stretch; }
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+  -ms-flex-align: stretch;
+      align-items: stretch; }
 
 html, body {
   margin: 0;
@@ -41,7 +44,8 @@ a {
   padding: 5vw; }
 
 .content {
-  flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   text-align: right; }
 
 .white-background {
@@ -81,9 +85,12 @@ a {
 .light-blue-background {
   background-color: rgba(77, 235, 248, 0.5);
   padding: 0;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
 
 h2 {
   font-size: 3.5rem;
@@ -112,9 +119,12 @@ h3 {
   background-color: rgba(255, 198, 0, 0.9);
   width: 34.5rem;
   min-width: 34.5rem;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end; }
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: end;
+      justify-content: flex-end; }
   .yellow-section .yellow-content {
     padding: 5vw 5vw; }
 
@@ -176,10 +186,14 @@ h3 {
   background-color: #318591;
   padding: 2.5vw 5vw;
   margin: 0;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between; }
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
 
 .logo-item {
   padding: 0 auto; }
@@ -203,9 +217,12 @@ h3 {
     font-size: 9px; }
   section {
     padding: 0;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: stretch; }
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: stretch;
+        align-items: stretch; }
   .content,
   .yellow-section {
     width: auto;
