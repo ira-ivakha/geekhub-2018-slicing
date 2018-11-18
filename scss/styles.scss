@@ -1,0 +1,272 @@
+$white: #fff;
+$yellow: #ffc600;
+$black: #000;
+$darkgrey: #151f29;
+$grey: #b6c2c0;
+$blue: #4debf8;
+$greyBlue: #318591;
+$rem : 10px;
+$bodyFontSize: 1.8rem;
+$leftIndent: 5vw;
+$footerFontSize: 2.1rem;
+html {
+  font-size: $rem;
+
+}
+body {
+  background-color: $darkgrey;
+  color: $white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: $bodyFontSize;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+section {
+  padding: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+}
+// normalize
+html, body {
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 auto;
+  padding: 0;
+}
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: $white;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    opacity: 0.8; // all interactive elements should have styles for interaction
+    text-decoration: none;
+  }
+}
+// styles
+.content-inner-wrapper,
+.yellow-content {
+   padding: $leftIndent;
+}
+.content {
+  flex-grow: 1;
+  text-align: right;
+}
+.white-background {
+  background-color: $white;
+  h2 {
+    color: $yellow;
+    font-weight: 800;
+    border-right: $leftIndent solid $yellow;
+    margin-right: -$leftIndent;
+    padding: 1rem 3rem;
+  }
+}
+.black-background {
+  background-color: $darkgrey;
+  position: relative;
+}
+.with-strange-border {
+  display: inline-block;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -$leftIndent;
+    height: 2.2rem;
+    width: calc( 100% + 5vw );
+    background-color: $grey;
+  }
+}
+.image-background {
+  background-image: url("image/joshua-ness-225844@2x.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.footer {
+  background-color: $darkgrey;
+}
+.light-blue-background {
+  background-color: rgba(77,235,248,0.5);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+h2 {
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  .big-font {
+    display: block;
+    font-size: 2.57em;
+    font-weight: 800;
+  }
+}
+h3 {
+  font-size: $footerFontSize;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  .big-font {
+    display: block;
+    font-size: 3.42em;
+    font-weight: 800;
+  }
+}
+
+.yellow-section {
+  margin-left: $leftIndent;
+  background-color: rgba(255,198,0,0.9);
+  width: 34.5rem;
+  min-width: 34.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .yellow-content {
+    padding: $leftIndent $leftIndent;
+  }
+}
+.yellow {
+  color: $yellow;
+}
+.black {
+  color: $black;
+}
+.with-top-element {
+  &:before {
+    content: '';
+    display: block;
+    height: 7.2rem;
+    border-right: 2.2rem solid $white;
+    text-align: right;
+  }
+}
+.with-border {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    height: 2.2rem;
+    width: 7.2rem;
+    background-color: $white;
+    margin-bottom: 2em;
+  }
+}
+.footer {
+  padding: $leftIndent $leftIndent/2 $leftIndent $leftIndent;
+  margin-left: -$leftIndent;
+}
+.contacts {
+
+}
+.contact-item {
+  font-size: $footerFontSize;
+  a {
+    display: block;
+    padding: 1em 0;
+    &:before {
+      content: '';
+      display: inline-block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 1.5em;
+      height: 2em;
+      margin-right: 1em;
+      vertical-align: middle;
+    }
+    &.address:before {
+      background-image: url("image/Shape_4@2x.png");
+    }
+    &.phone:before {
+      background-image: url("image/Shape_1@2x.png");
+    }
+    &.email:before {
+      background-image: url("image/Shape_3@2x.png");
+    }
+    &.site {
+      font-weight: 600;
+      color: $yellow;
+      &:before {
+        content: none;
+      }
+    }
+  }
+}
+.logo-list {
+  background-color: $greyBlue;
+  padding: $leftIndent/2 $leftIndent;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-item {
+  padding: 0 auto;
+  a {
+    display: block;
+  }
+  img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 6.8rem;
+    max-width: 15.7rem;
+  }
+}
+@media all and (max-width: 1200px) {
+  h2 {
+    font-size: 2.6rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+@media all and (max-width: 850px) {
+  html {
+    font-size: 9px;
+  }
+  section {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .content,
+  .yellow-section {
+    width: auto;
+    max-width: inherit;
+    margin: 0;
+  }
+  .footer {
+    padding: $leftIndent;
+    margin: 0;
+  }
+}
+@media all and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+  //h2 {
+  //  font-size: 1.8rem;
+  //}
+  //h3 {
+  //  font-size: 1.6rem;
+  //}
+}
